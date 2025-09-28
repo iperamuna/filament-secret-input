@@ -1,0 +1,46 @@
+{
+  "name": "iperamuna/filament-secret-input",
+  "description": "A Filament v4 form field for masked secret input with optional client-side sealed-box encryption and an encrypted masked Eloquent cast.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Indunil Peramuna"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "illuminate/support": "^10.0|^11.0|^12.0",
+    "illuminate/database": "^10.0|^11.0|^12.0",
+    "filament/forms": "^4.0",
+    "filament/support": "^3.0|^4.0",
+    "laravel/prompts": "^0.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Iperamuna\\FilamentSecret\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Iperamuna\\FilamentSecret\\FilamentSecretInputServiceProvider"
+      ]
+    }
+  },
+  "require-dev": {
+    "pestphp/pest": "^2.34",
+    "pestphp/pest-plugin-laravel": "^2.4",
+    "orchestra/testbench": "^8.0|^9.0"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Iperamuna\\FilamentSecret\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "pest",
+    "test-coverage": "pest --coverage"
+  },
+  "minimum-stability": "stable"
+}
